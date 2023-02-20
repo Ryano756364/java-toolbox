@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Objects;
 
-public class _02_array_list {
+public class _01_array_list {
 
     public static ArrayList<String> listNames = new ArrayList<>();
     public static ArrayList<String> cleanedArrayListOfNames = new ArrayList<>();
