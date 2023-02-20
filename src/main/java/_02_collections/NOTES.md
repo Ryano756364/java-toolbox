@@ -27,3 +27,9 @@ List Types
   - extends vector class
 - Vector (very rarely used)
   - synchronized where ArrayList is not
+
+---
+- Random Notes
+  - if list needs to be sorted with custom objects, 
+  - look into comparable interface
+  - ***will sort based on natural ordering defined in that class***
