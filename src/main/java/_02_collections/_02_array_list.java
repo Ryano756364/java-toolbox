@@ -13,19 +13,27 @@ public class _02_array_list {
         Collections.addAll(listNames, "Ryan", "Alyssa", "Tommy", "Suzie");
 
         cleanedArrayListOfNames = convertArrayListToALlLowercase(listNames);
-        System.out.println(cleanedArrayListOfNames.get(0));
-        displayList(cleanedArrayListOfNames);
 
         removeNameByPosition(0, listNames);
         removeNameByPosition(0, cleanedArrayListOfNames);
-        displayList(cleanedArrayListOfNames);
 
         removeNameByString("Alyss", cleanedArrayListOfNames);
-        displayList(cleanedArrayListOfNames);
 
         removeNameByString("Alyssa", cleanedArrayListOfNames);
-        displayList(cleanedArrayListOfNames);
 
+        arrListReplaceNameWithNewName(cleanedArrayListOfNames, "Tommy", "Adam");
+
+    }
+
+    private static void arrListReplaceNameWithNewName(ArrayList<String> cleanedArrayListOfNames,
+                                                      String oldName, String newName) {
+        int position = cleanedArrayListOfNames.indexOf(oldName.toLowerCase());
+        if(position == -1) {
+            System.out.println("Invalid entry");
+            return;
+        };
+        cleanedArrayListOfNames.set(position, newName);
+        displayList(cleanedArrayListOfNames);
     }
 
     private static ArrayList<String> convertArrayListToALlLowercase(ArrayList<String> listNames) {
